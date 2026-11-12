@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Phạm Đăng Khoa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Menu -->
+    <header class="header">
+        <div class="logo">Đăng Khoa</div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+        <nav class="nav" id="nav-menu">
+            <a href="#about" class="nav-link">Giới thiệu</a>
+            <a href="#skills" class="nav-link">Kỹ năng</a>
+            <a href="#projects" class="nav-link">Dự án</a>
+            <a href="#contact" class="nav-link">Liên hệ</a>
+            <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Phần Giới thiệu -->
+    <section id="about" class="section reveal">
+        <div class="about-container">
+            <div class="about-text">
+                <h1>Xin chào, mình là <span>Phạm Đăng Khoa</span></h1>
+                <p>Mã sinh viên: <strong>B25DCCC113</strong> - Lớp: <strong>D25CQCC05-B</strong></p>
+                <p>Sinh viên ngành Công nghệ thông tin định hướng ứng dụng tại Học viện Công nghệ Bưu chính Viễn thông (PTIT). Đam mê phát triển phần mềm và xây dựng các ứng dụng web hiện đại.</p>
+                <a href="#contact" class="btn nav-link">Liên hệ ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Danh sách Kỹ năng -->
+    <section id="skills" class="section reveal">
+        <h2 class="section-title">Kỹ năng lập trình</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5 & CSS3</div>
+            <div class="skill-card">JavaScript (ES6+)</div>
+            <div class="skill-card">Java (OOP)</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">ReactJS Cơ bản</div>
+            <div class="skill-card">Git & GitHub</div>
+        </div>
+    </section>
+
+    <!-- Danh sách Dự án (4 dự án > 3 theo yêu cầu) -->
+    <section id="projects" class="section reveal">
+        <h2 class="section-title">Dự án của tôi</h2>
+        
+        <div class="search-box">
+            <input type="text" id="project-search" placeholder="🔍 Tìm kiếm dự án theo tên hoặc công nghệ (VD: Java, Web, Python)...">
+        </div>
+
+        <div class="projects-grid" id="projects-list">
+            <div class="project-card" data-tags="html css js web">
+                <h3>1. Website Portfolio Cá Nhân</h3>
+                <p>Trang web giới thiệu bản thân tích hợp chế độ sáng/tối, tìm kiếm dự án và thiết kế đáp ứng đa thiết bị.</p>
+                <span class="tag">HTML/CSS/JS</span>
+            </div>
+            <div class="project-card" data-tags="react api web">
+                <h3>2. Ứng Dụng Dự Báo Thời Tiết</h3>
+                <p>Ứng dụng xem thời tiết trực tuyến cho 8 thành phố lớn tại Việt Nam sử dụng Open-Meteo API.</p>
+                <span class="tag">ReactJS</span>
+            </div>
+            <div class="project-card" data-tags="java oop desktop">
+                <h3>3. Phần Mềm Quản Lý Nhân Sự</h3>
+                <p>Hệ thống quản lý thông tin nhân viên, tính lương và phân quyền phòng ban viết bằng ngôn ngữ Java.</p>
+                <span class="tag">Java</span>
+            </div>
+            <div class="project-card" data-tags="python algorithm">
+                <h3>4. Công Cụ Xử Lý Dữ Liệu Tự Động</h3>
+                <p>Các kịch bản Python hỗ trợ giải thuật, thống kê điểm số và tự động hóa tác vụ tệp tin.</p>
+                <span class="tag">Python</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Liên hệ -->
+    <section id="contact" class="section reveal">
+        <h2 class="section-title">Liên hệ với tôi</h2>
+        <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+                <label for="name">Họ và tên (*)</label>
+                <input type="text" id="name" placeholder="Nhập họ tên của bạn (tối thiểu 3 ký tự)">
+                <small class="error-msg" id="name-error"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email (*)</label>
+                <input type="email" id="email" placeholder="Nhập địa chỉ email hợp lệ">
+                <small class="error-msg" id="email-error"></small>
+            </div>
+            <div class="form-group">
+                <label for="message">Tin nhắn (*) <span id="char-count">0/200</span></label>
+                <textarea id="message" rows="4" maxlength="200" placeholder="Nhập nội dung tin nhắn (tối thiểu 10 ký tự)..."></textarea>
+                <small class="error-msg" id="message-error"></small>
+            </div>
+            <button type="submit" class="btn">Gửi tin nhắn</button>
+            <p id="form-success" class="success-msg"></p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© <span id="current-year"></span> Phạm Đăng Khoa (B25DCCC113). All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
